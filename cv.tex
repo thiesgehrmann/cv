@@ -1,0 +1,434 @@
+\documentclass[letterpaper, 10pt]{article} %norsk
+
+  % Packages
+\usepackage[left=2cm, right=2cm, top=3cm]{geometry}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage[dvips]{graphicx}
+\usepackage{url}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\usepackage{natbib}
+\usepackage{bibentry}
+\nobibliography{cv}
+
+
+  % Set up hyperref
+\hypersetup{
+  colorlinks,
+  breaklinks,
+  linkcolor=NavyBlue,
+  urlcolor=NavyBlue,
+  pdftitle={Thies Gehrmann Curriculum Vitae},
+  pdfauthor={Thies Gehrmann},
+  pdfsubject={Curriculum Vitae},
+  pdfcreator={Thies Gehrmann},
+  pdfproducer={Thies Gehrmann},
+}
+
+  % Geometry 
+\textheight 23 cm
+\textwidth 16 cm
+\oddsidemargin 0 cm
+\evensidemargin 0 cm
+
+  % Create a function for quoting
+\renewcommand{\quote}[1]{
+  ``\emph{#1}''
+}
+
+  % Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{$\cdot$}{
+    \setlength{\itemsep}{0pt}
+    \setlength{\topsep}{7pt}
+    \setlength{\leftmargin}{0pt}
+    \setlength{\itemindent}{10pt}
+  }
+}{
+  \end{list}
+}
+
+ % A new section header
+\newcommand{\nsection}[1]{
+    \section*{\color{MidnightBlue}#1}
+  \vspace{-1mm}
+}
+
+  % A non italicized item in a section
+\newcommand{\entryni}[2]{
+  \noindent
+  \begin{tabular}[t]{p{0.2\textwidth}|p{0.8\textwidth}}
+    \textbf{\color{BrickRed}#1} & {#2} \\
+  \end{tabular}
+  \vspace{-2mm}
+
+}
+
+ % An italicized item in a section
+\newcommand{\entry}[3]{
+  \noindent
+  \begin{tabular}[t]{p{0.2\textwidth}|p{0.8\textwidth}}
+    \textbf{\color{BrickRed}#1} & {#2 \textit{#3}} \\
+  \end{tabular}
+  \vspace{-2mm}
+}
+
+
+  % No paragraph indent
+\setlength\parindent{10pt}
+
+  % Data definitions
+\def\doctitle{\color{BrickRed}Curriculum Vit\ae}
+\def\name{\color{MidnightBlue}Thies Gehrmann}
+\def\maxdeg{\color{Black}M.Sc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                    END LATEX PREAMBLE                                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\small
+
+\pagestyle{plain}
+
+\label{top}
+
+  % Title
+{\huge {\textbf \name} {\footnotesize $\,$ \maxdeg} $\;$ {\textbf \doctitle} }
+\vspace{0.1cm}
+\hrule
+\vspace{0.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                    CONTACT & CONTENT INFORMATION                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.50\textwidth}
+  (email): \href{mailto:thiesgehrmann@gmail.com}{thiesgehrmann@gmail.com} \\
+  (tel NL): +31 (0)6 198 13 177     \\
+  %(tel UK): +44 (0)7517 221 445    \\
+  \\
+  D.O.B. April $8^{th}$ 1989 \\
+  Nationality: \includegraphics[scale=0.4]{de.eps} German\\
+  \hrule
+  \vspace{5pt}
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.30\textwidth}
+  \includegraphics[scale=0.4]{nl.eps}
+  \textbf{Private address:} \\
+  Noordeinde 21A \\
+  2311 CA Leiden \\
+  The Netherlands \\
+%  \\
+%  \includegraphics[scale=0.4]{nl.eps}
+%  \textbf{Work address:} \\
+%  EWI HB13.090 \\
+%  Mekelweg 4\\
+%  2628 CD Delft \\
+%  The Netherlands \\
+%  \\
+
+  Last updated \today.
+\end{minipage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                      PERSONAL PROFILE                                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\nsection{Personal profile}
+  \label{sec:persprof}
+
+  Currently, I am a PhD in Bioinformatics student at the Delft University of Technology.
+  Having been raised in Norway, among people from all over the world, I am accustomed to an international, multicultural environment.
+  Academically, machine learning techniques are interesting to me, and bioinformatics presents a splendid opportunity to develop and apply them.
+  I am looking for a position where challenging problems, involving many different skills and team work, allow me to contribute positively to society, and further develop my skills.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                        EDUCATION                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\nsection{Education}
+  \label{sec:education}
+
+  \entry{2012-Present}
+        {Pattern Recognition and Bioinformatics group, TU Delft, The Netherlands \newline}
+        {PhD in Bioinformatics. \newline
+         Gene regulation in mushroom formation.
+         \newline}
+
+  \entry{2010-2012}
+        {Leiden University, Leiden, The Netherlands (In cooperation with TU Delft) \newline}
+        {MSc Computer Science Track Bioinformatics. \newline
+         Thesis on protein function prediction using Conditional Random Fields.
+         \newline}
+
+  \entry{2008-2010}
+        {Heriot Watt University, Edinburgh, Scotland \newline}
+        {BSc (Ord) Computer Science \newline
+         Graduated with distinction.
+         }
+
+%  \entry{2007-2008}
+%        {Napier University, Edinburgh, Scotland \newline}
+%        {Certificate of Higher Education \newline
+%         Completed year 1 of Computer Studies, then transferred to Heriot Watt University.
+%         \newline}
+
+%  \entry{2000-2007}
+%        {International School of Stavanger, Stavanger, Norway \newline}
+%        {Completed the IB and IGCSE diplomas.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                         EMPLOYMENT                                        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\nsection{Employment}
+  \label{sec:employment}
+
+  \entry{November 2012 - \newline Present}
+        {PhD Researcher \newline}
+        {In my current position, I conduct research and perform teaching duties, including Bachelor and Master's level courses, and student supervision.
+        }
+%  \entry{January 2012 - \newline June 2012 }
+%        {Teaching Assistant - Course Computational Molecular Biology \newline}
+%        {I assisted with the course \textit{Computational Molecular Biology}, part of the Master's degree in Bioinformatics at Leiden University.
+%         This involved assisting with the material, creating and grading assignments, and collecting datasets for course use.
+%        }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                           SKILLS                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\nsection{Skills}
+  \label{sec:skills}
+
+  \entryni{Technical Skills}
+          {Python, Scala, C/C++, Java, Shell, Matlab, R\newline
+           Experience with schedulers (SLURM, PDB) and version control software, (SVN, Git).\newline
+           SQL, XML (and related technologies), \LaTeX. \newline
+           Experienced with Unix environments (primarily Linux).\newline
+           Machine learning, comparative genomics, RNA-Seq analysis and algorithm development.
+           %Ability to easily use new tools and methods, and if all fails, develop his own.
+           \newline}
+  \entryni{Languages}
+          {Fluent in Norwegian, German and English. \newline
+           High level Dutch. Beginners Spanish and French.
+          }
+
+\nsection{Awards}
+  \entryni{2013}
+          {TU Delft Graduate school event 2013 'Best poster presentation award'.\newline}
+  \entryni{2010}
+           {Scott Logic Computer Science Prize 2010.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                         ACTIVITIES                                        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\nsection{Activities}
+%  \label{sec:activities}
+%
+%  \entry{Spring-Autumn 2012}
+%        {Master's Thesis on protein function prediction using Conditional Markov Fields\newline}
+%        {Changing a previous Markov Random Field model to a CRF model to demonstrate that CRFs can be used to combine several sources of information to predict protein function.
+%         \newline}
+%
+%  \entry{Autumn-Winter 2011}
+%        {Literature research project as part of Master's degree \newline}
+%        {As a study of contextually aware machine learning methods which can utilize heterogeneous data, Conditional Random Fields were studied.
+%         Their use in Bioinformatics was examined in several applications, including gene finding, named entity recognition and protein-protein interaction site prediction.
+%        }
+%
+%  \entry{Spring 2010}
+%        {Software development project at Heriot Watt University \newline}
+%        {Part of a continuous assessment at Heriot Watt University.
+%         The involved writing primitive CGI libraries in C;
+%         Thies was responsible for the development and served as project manager.
+%         }
+%
+%  \entry{Summer 2008}
+%        {Unpaid learning experience at Napier University \newline}
+%        {An attempt was made to develop code for the Silabs CP220x embedded ethernet controller which compiled with the open source SDCC (Small Device C Compiler) to replace proprietary web server code written for proprietary Keil compilers and libraries.
+%        }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                         PUBLICATIONS                                      %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\nsection{Publications}
+  \label{sec:publications}
+
+  \entryni{Journal \newline publications}
+        {
+         
+         \begin{enumerate}[label={[\arabic*]},nosep]
+           %\item \bibentry{gehrmann2015isoform}
+           \item (In press) \bibentry{pelkmans2016c2h2}
+           \item \bibentry{gehrmann2015proteny}\vspace*{-\baselineskip}
+         \end{enumerate}
+        }
+
+  \entryni{Conference \newline publications}
+        {\begin{enumerate}[label={[\arabic*]},nosep]
+          \addtocounter{enumi}{2}
+          \item \bibentry{gehrmann2013conditional} \vspace*{-\baselineskip}
+         \end{enumerate}
+        }
+
+  \entryni{In the works}
+       {
+       \begin{enumerate}[label={[\arabic*]},nosep]
+          \addtocounter{enumi}{3}
+          \item{\textit{Schizophyllum commune} has an extensive and functional alternative splicing repertoire}
+          \item{Homokaryon specific expression in \textit{Agaricus bisporus} affects core functionality}
+          \item{Understanding the evolution of antibiotic resistance in \textit{Mycobacterium tuberculosis} strains from Southern-India from Whole Genome Sequencing} \vspace*{-\baselineskip}
+       \end{enumerate}
+       }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                       APPLICATION SHOWCASE                                %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\nsection{Application Showcase}
+%  \label{sec:showcase}
+%
+%  \entry{DT-cut}
+%        {A tool and generalized toolbox for discovering significant clusters in any data.\newline}
+%        {\url{https://github.com/thiesgehrmann/DTcut}
+%        \newline}
+%
+%  \entry{ARA}
+%        {A toolkit for marker and SNP analyis and quantification. Developed with Thomas Abeel and Arlin Keo.\newline}
+%        {\url{https://github.com/AbeelLab/ara}
+%        \newline}
+%
+%  \entry{Proteny}
+%        {A toolbox developed with Python to perform a Synteny analysis over two genomes.\newline}
+%        {\url{https://github.com/thiesgehrmann/proteny}
+%        \newline}
+%
+%  \entry{RNA-Seq Pipeline}
+%        {A pipeline developed with Python and shell tools to perform analysis on RNA-Seq data.\newline}
+%        {\url{https://github.com/thiesgehrmann/delftrnaseq}
+%        \newline}
+%
+%  \entry{CRFunc}
+%        {A tool developed to integrate multiple sources of data for protein function prediction using conditional random fields.\newline}
+%        {\url{https://github.com/thiesgehrmann/CRFunc}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                         REFEREES                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\nsection{Referees}
+%  \label{sec:referees}
+%
+%  \entry{Upon request}{Contact Thies for referee contact details.}{}
+%
+%  \entry{Marcel Reinders}
+%        {Group leader of the Delft Bioinformatics Lab \newline}
+%        {\href{mailto:M.J.T.Reinders@tudelft.nl}{M.J.T.Reinders@tudelft.nl} \newline
+%         PhD promoter and daily supervisor.
+%         \newline}
+%  \entry{Anton Sonnenberg}
+%        {Leader of Mushroom Research Group, Wageningen University\newline}
+%        {\href{mailto:anton.sonnenberg@wur.nl}{anton.sonnenberg@wur.nl} \newline
+%         Collaborator and STW Project user committee member.
+%        }
+%
+%  \entry{Dick de Ridder}
+%        {Professor in Bioinformatics in the WU Plant Sciences group \newline}
+%        {\href{mailto:dick.deridder@wur.nl}{dick.deridder@wur.nl}  \url{http://www.wageningenur.nl/en/Persons/prof.dr.ir.-D-Dick-de-Ridder.htm}\newline
+%         Master's thesis supervisor.
+%         \newline}
+
+%  \entry{Marco Loog}
+%        {Assistant professor at the TU Delft Computer Vision lab \newline}
+%        {\href{mailto:m.loog@tudelft.nl}{m.loog@tudelft.nl} \url{http://visionlab.tudelft.nl/users/marco-loog}\newline
+%         Master's Thesis supervisor.
+%         \newline}
+
+%  \entry{Erwin Bakker}
+%        {Assistant professor at the Leiden Institute of Advanced Computer Science \newline}
+%        {\href{mailto:erwin@liacs.nl}{erwin@liacs.nl}  \url{http://www.liacs.nl/~erwin/}\newline
+%         Very familiar with Thies' academic performance.
+%         \newline}
+
+%  \entry{Murdoch Gabbay}
+%        {Lecturer at the department of Mathematical and Computer Sciences at HWU \newline}
+%        {\href{mailto:gabbay@macs.hw.ac.uk}{gabbay@macs.hw.ac.uk}  \url{http://www.macs.hw.ac.uk/~gabbay}\newline
+%         He offered considerable advice and inspiration.
+%        }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                       EDUCATIONAL ACTIVITIES                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\nsection{Teaching}
+  \label{sec:teaching}
+
+  \entry{MSc Courses}{}
+        {Functional Genomics and Systems Biology: {\normalfont Lecturer and teaching assistant. Fall 2014, 2015, 2016 at TU Delft } \newline
+        }
+  \entry{BSc Courses}{}
+        {Life Science and Technology Bioinformatics: { \normalfont Teaching assistant and course content creator. Spring 2016 at TU Delft.}\newline
+         Genome Scale Data Analysis: { \normalfont Lecturer and teaching assistant. Fall 2014 at TU Delft } \newline
+        }
+  \entry{External Courses}{}
+        {Quantitative biology summer school: { \normalfont Lectured on computational aspects of synteny and alternative splicing in fungi. Summer 2015 at Utrecht University.}}
+
+\nsection{Supervision}
+  \label{sec:supervision}
+  \entry{Arlin Keo}{Msc Student 2014-2016 \newline}
+        {Detecting mixed Mycobacterium tuberculosis infections and differences in drug susceptibility with WGS data.\newline}
+  \entry{Andr\'{e} Vollering}{MSc Student 2014-2015 \newline}
+        {Heterosis: Finding Associated Genomic Regions. \newline}
+  \entry{Valerie Pourquie}{BSc Student 2015 \newline}
+        {Conservation of polarization proteins in yeast and fungi. \newline}
+  \entry{Dimitris Palachanis}{MSc Student 2013-2014 \newline}
+        {Using the Multiple Instance Learning framework to address differential regulation.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                       OTHER SKILLS/HOBBIES                                %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\nsection{Other activities/skills/information}
+  \label{sec:oinfo}
+
+  \bibliographystyle{plainnat}
+
+  \entryni{Reviewing}
+          {Nucleic Acid Research (2016)\newline}
+  \entryni{Volunteering}
+          {International Student Network (Leiden) 2013-2016. Theatre set construction and management.\newline
+           Dutch Red Cross (Den Haag) 2014-2015. First Aid worker for events and refugee camps.\vspace{2ex}}
+%  \entryni{Professional Courses followed}
+%          {2014 - NBIC: Comparative Genomics.\newline
+%           2013 - NBIC: Advanced NGS - RNA-Seq.\newline
+%           2014 - CSHL: Statistical Methods in Functional Genomics\newline
+%          }
+%  \entryni{Transferable skills}
+%           2013 - TUD: Art of presenting science.\newline
+%           2013 - TUD: Teaching and active learning.\newline
+%           2013 - TUD: Coaching individual students.\newline
+%           CSHL: Statistical Methods in Functional Genomics.\newline
+%          }
+  \entryni{Special Interests}
+          {Theatre acting, Sailing, Cycling, Climbing/Bouldering, Swimming, Skiing and Hiking.
+          }
+
+\nobibliography{cv}
+\end{document}
+

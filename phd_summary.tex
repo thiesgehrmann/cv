@@ -1,0 +1,163 @@
+\documentclass[letterpaper, 11pt]{article} %norsk
+
+  % Packages
+\usepackage[left=2cm, right=2cm, top=3cm]{geometry}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage[dvips]{graphicx}
+\usepackage{url}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{xspace}
+\usepackage{xstring}
+
+\usepackage{natbib}
+\usepackage{bibentry}
+\nobibliography{cv}
+
+
+  % Set up hyperref
+\hypersetup{
+  colorlinks,
+  breaklinks,
+  linkcolor=NavyBlue,
+  urlcolor=NavyBlue,
+  pdftitle={Thies Gehrmann PhD Summary},
+  pdfauthor={Thies Gehrmann},
+  pdfsubject={PhD Summary},
+  pdfcreator={Thies Gehrmann},
+  pdfproducer={Thies Gehrmann},
+}
+
+  % Geometry 
+\textheight 23 cm
+\textwidth 16 cm
+\oddsidemargin 0 cm
+\evensidemargin 0 cm
+
+  % Create a function for quoting
+\renewcommand{\quote}[1]{
+  ``\emph{#1}''
+}
+
+  % Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{$\cdot$}{
+    \setlength{\itemsep}{0pt}
+    \setlength{\topsep}{7pt}
+    \setlength{\leftmargin}{0pt}
+    \setlength{\itemindent}{10pt}
+  }
+}{
+  \end{list}
+}
+
+ % A new section header
+\newcommand{\nsection}[1]{
+    \section*{\color{MidnightBlue}#1}
+  \vspace{-1mm}
+}
+
+  % A non italicized item in a section
+\newcommand{\entryni}[2]{
+  \noindent
+  \begin{tabular}[t]{p{0.2\textwidth}|p{0.8\textwidth}}
+    \textbf{\color{BrickRed}#1} & {#2} \\
+  \end{tabular}
+  \vspace{-2mm}
+
+}
+
+ % An italicized item in a section
+\newcommand{\entry}[3]{
+  \noindent
+  \begin{tabular}[t]{p{0.2\textwidth}|p{0.8\textwidth}}
+    \textbf{\color{BrickRed}#1} & {#2 \textit{#3}} \\
+  \end{tabular}
+  \vspace{-2mm}
+}
+
+\newcommand{\fl}[1]{
+  {\color{MidnightBlue}\StrLeft{#1}{1}\xspace}\StrGobbleLeft{#1}{1}\xspace
+}
+
+  % No paragraph indent
+\setlength\parindent{10pt}
+
+  % Data definitions
+\def\doctitle{\color{BrickRed}PhD Summary}
+\def\name{\color{MidnightBlue}Thies Gehrmann}
+\def\maxdeg{\color{Black}M.Sc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                    END LATEX PREAMBLE                                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\small
+
+\pagestyle{plain}
+
+\label{top}
+
+  % Title
+{\huge {\textbf \name} {\footnotesize $\,$ \maxdeg} $\;$ {\textbf \doctitle} }
+\vspace{0.1cm}
+\hrule
+\vspace{0.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                    CONTACT & CONTENT INFORMATION                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent\makebox[\textwidth][c]{%
+\begin{minipage}[t]{0.9\textwidth}
+  \setlength{\parindent}{2em}
+  \setlength{\parskip}{1em}
+
+  My PhD was embedded in the STW project 'Push the White Button', funded by the association of dutch mushroom growers.
+  The goal of the project was to further the understanding of gene regulation in \textit{Scizophyllum commune} mushroom formation and to transfer that knowledge to the agricultural mushroom \textit{Agaricus bisporus}.
+
+  In preparation of the transfer of knowledge, I developed Proteny, an algorithm to study the distant synteny between the two evolutionarily distant strains.
+  The algorithm calculates a statistical significance for each discovered syntenic cluster, based on a background model of evolution.
+  I found large chromosome similarities and rearrangements and duplications that would not have been found with traditional algorithms.
+
+  Gene regulation was studied in these two organisms with RNA-Seq data.
+  Therefore, I developed an RNA-Seq pipeline to analyze the gene expression from both strains.
+  Through downstream analysis, we found a new transcription factor involved in mushroom fructification.
+  We also verified that some fructification genes in \textit{S. commune} are also involved in fructification in \textit{A. bisporus}.
+
+  Beyond the fundamental RNA-Seq analysis, I studied regulatory mechanisms that were quite unexplored in fungi.
+  With the RNA-Seq data from \textit{S. commune}, we constructed alternatively spliced structures.
+  Due to the gene density of this organism, traditional methods fuse genes together, resulting in incorrect structures.
+  To overcome this, we developed a region-resistricted probablistic modeling method, whereby we restrict the search for structures to the regions of existing genes, preventing gene fusion.
+  We find thousands of alternatively spliced transcripts which are all supported by sequencing data.
+  By comparing the expression levels of the alternative transcripts of genes, we identify genes whose alternative splicing is regulated throughout development.
+  With functional predictions, we also determine that alternative splicing produces alternative functionality in \textit{S. commune}.
+  For the first time, we found that alternative splicing impacts all functional categories throughout mushroom development.
+
+  In \textit{A. bisporus}, the nuclear organization of the genome is particularly interesting.
+  Each cell contains on average six nuclei, each being  a copy of one of the two parental nuclei, referred to as the homokaryons of \textit{A. bisporus}.
+  Genes therefore exist several times in two different forms, once in each homokaryon, and once in each nucleus.
+  With our RNA-Seq data, and the recently sequenced homokaryons, we can study the homokaryon specific expression of these genes.
+  I developed an algorithm to identify unique markers for each gene on the two homokaryons, and to quantify the abundance of these markers in each sample.
+  We find hundreds of genes whose expression is significantly different between the two homokaryons.
+  Additionally, the two different homokaryons are differentially active in mRNA production throughout mushroom tissue development.
+  One homokaryon, known to have a white skin phenotype, is specifically active in skin tissue.
+  Further, many chromosomes are also preferentially active in one homokaryon over the other.
+  These facts indicate significant currently unknown regulatory mechanisms, and will impact mushroom breeding programmes.
+
+  Throughout my PhD I focused on gene regulatory mechanisms that were previously ignored in mushrooms.
+  I aided the discovery of additional transcription factors involved in mushroom development, and contributed to the transfer of knowledge from model mushroom to agricultural mushroom.
+  Further, I found that two regulatory mechanisms, alternative splicing and homokaryon specific expression have substantial impacts throughout development.
+  It is my desire to continue working to improve the wealth of knowledge on fungi, to expand their industrial applications in order to contribute positively to society.
+
+\end{minipage}
+}
+
+
+\thispagestyle{empty}
+\end{document}
+

@@ -1,0 +1,163 @@
+\documentclass[letterpaper, 10pt]{article} %norsk
+
+  % Packages
+\usepackage[left=2cm, right=2cm, top=3cm]{geometry}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage[dvips]{graphicx}
+\usepackage{url}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{xspace}
+\usepackage{xstring}
+
+\usepackage{natbib}
+\usepackage{bibentry}
+\nobibliography{cv}
+
+
+  % Set up hyperref
+\hypersetup{
+  colorlinks,
+  breaklinks,
+  linkcolor=NavyBlue,
+  urlcolor=NavyBlue,
+  pdftitle={Thies Gehrmann Cover Letter},
+  pdfauthor={Thies Gehrmann},
+  pdfsubject={Cover Letter},
+  pdfcreator={Thies Gehrmann},
+  pdfproducer={Thies Gehrmann},
+}
+
+  % Geometry 
+\textheight 23 cm
+\textwidth 16 cm
+\oddsidemargin 0 cm
+\evensidemargin 0 cm
+
+  % Create a function for quoting
+\renewcommand{\quote}[1]{
+  ``\emph{#1}''
+}
+
+  % Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{$\cdot$}{
+    \setlength{\itemsep}{0pt}
+    \setlength{\topsep}{7pt}
+    \setlength{\leftmargin}{0pt}
+    \setlength{\itemindent}{10pt}
+  }
+}{
+  \end{list}
+}
+
+ % A new section header
+\newcommand{\nsection}[1]{
+    \section*{\color{MidnightBlue}#1}
+  \vspace{-1mm}
+}
+
+  % A non italicized item in a section
+\newcommand{\entryni}[2]{
+  \noindent
+  \begin{tabular}[t]{p{0.2\textwidth}|p{0.8\textwidth}}
+    \textbf{\color{BrickRed}#1} & {#2} \\
+  \end{tabular}
+  \vspace{-2mm}
+
+}
+
+ % An italicized item in a section
+\newcommand{\entry}[3]{
+  \noindent
+  \begin{tabular}[t]{p{0.2\textwidth}|p{0.8\textwidth}}
+    \textbf{\color{BrickRed}#1} & {#2 \textit{#3}} \\
+  \end{tabular}
+  \vspace{-2mm}
+}
+
+\newcommand{\fl}[1]{
+  {\color{MidnightBlue}\StrLeft{#1}{1}\xspace}\StrGobbleLeft{#1}{1}\xspace
+}
+
+  % No paragraph indent
+\setlength\parindent{10pt}
+
+  % Data definitions
+\def\doctitle{\color{BrickRed}Cover Letter}
+\def\name{\color{MidnightBlue}Thies Gehrmann}
+\def\maxdeg{\color{Black}M.Sc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                    END LATEX PREAMBLE                                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\small
+
+\pagestyle{plain}
+
+\label{top}
+
+  % Title
+{\huge {\textbf \name} {\footnotesize $\,$ \maxdeg} $\;$ {\textbf \doctitle} }
+\vspace{0.1cm}
+\hrule
+\vspace{0.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                    CONTACT & CONTENT INFORMATION                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.50\textwidth}
+  (email): \href{mailto:thiesgehrmann@gmail.com}{thiesgehrmann@gmail.com} \\
+  (tel NL): +31 (0)6 198 13 177     \\
+  %(tel UK): +44 (0)7517 221 445    \\
+  \\
+  D.O.B. April $8^{th}$ 1989 \\
+  Nationality: \includegraphics[scale=0.4]{de.eps} German\\
+  \hrule
+  \vspace{5pt}
+
+  Last updated \today.
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.30\textwidth}
+  \includegraphics[scale=0.4]{nl.eps}
+  \textbf{Private address:} \\
+  Rapenburg 87c \\
+  2311 GH Leiden \\
+  The Netherlands \\
+  \\
+  \includegraphics[scale=0.4]{nl.eps}
+  \textbf{Work address:} \\
+  EWI, HB13.090 \\
+  Mekelweg 4\\
+  2628 CD Delft \\
+  The Netherlands \\
+\\
+\end{minipage}
+
+
+\noindent\makebox[\textwidth][c]{%
+\begin{minipage}[t]{0.8\textwidth}
+  \setlength{\parindent}{4em}
+  \setlength{\parskip}{1em}
+
+  \fl{Contrary} to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+  \fl{Contrary} to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+  \fl{Contrary} to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+  \fl{Contrary} to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+\end{minipage}
+}
+
+\thispagestyle{empty}
+\end{document}
+
