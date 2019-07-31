@@ -14,6 +14,7 @@
 \usepackage{bibentry}
 \nobibliography{cv}
 
+%\usepackage{fontawesome} %  \faExternalLink
 
   % Set up hyperref
 \hypersetup{
@@ -49,7 +50,7 @@
   }
 }{
   \end{list}
-}
+}   
 
  % A new section header
 \newcommand{\nsection}[1]{
@@ -57,8 +58,10 @@
   \vspace{-1mm}
 }
 
+
+
   % A non italicized item in a section
-\newcommand{\entryni}[2]{
+\newcommand{\oentryni}[2]{
   \noindent
   \begin{tabular}[t]{p{0.2\textwidth}|p{0.8\textwidth}}
     \textbf{\color{BrickRed}#1} & {#2} \\
@@ -68,12 +71,53 @@
 }
 
  % An italicized item in a section
-\newcommand{\entry}[3]{
+\newcommand{\oentry}[3]{
   \noindent
   \begin{tabular}[t]{p{0.2\textwidth}|p{0.8\textwidth}}
     \textbf{\color{BrickRed}#1} & {#2 \textit{#3}} \\
   \end{tabular}
   \vspace{-2mm}
+}
+
+\usepackage{paracol}
+
+\newcommand{\entryni}[2]{
+	\columnratio{0.2,0.8}
+	\setlength{\columnseprule}{0.4pt}
+	\setlength{\columnsep}{2em}
+	\begin{paracol}{2}
+		\begin{leftcolumn}
+			\begin{flushright}\noindent\textbf{\color{BrickRed}#1}\end{flushright}
+			\vspace{-1em}
+		\end{leftcolumn}
+		\begin{rightcolumn}
+			\begin{flushleft}
+				\noindent{#2}
+			\end{flushleft}
+			\vspace{-1em}
+		\end{rightcolumn}
+	\end{paracol}
+	\vspace{-2mm}
+}
+
+% An italicized item in a section
+\newcommand{\entry}[3]{
+	\columnratio{0.2,0.8}
+	\setlength{\columnseprule}{0.4pt}
+	\setlength{\columnsep}{2em}
+	\begin{paracol}{2}
+		\begin{leftcolumn}
+			\begin{flushright}\noindent\textbf{\color{BrickRed}#1}\end{flushright}
+			\vspace{-1em}
+		\end{leftcolumn}
+		\begin{rightcolumn}
+			\begin{flushleft}
+				\noindent{#2} \textit{#3}
+			\end{flushleft}
+		\vspace{-1em}
+		\end{rightcolumn}
+	\end{paracol}
+		\vspace{-2mm}
 }
 
 
@@ -163,11 +207,11 @@
 	
 	\entry{Jan. 2018 - Present}
 	      {Postdoc at Department of Molecular Epidemiology, Leiden University Medical Centre \newline}
-	      {Bioinformatician on healthy ageing, together with Max Plank Institute of Biological Ageing. \newline}
+	      {Bioinformatician on healthy ageing, together with Max Plank Institute of Biological Ageing.}
 	      
 	\entry{Nov. 2016 - 2017}
 	      {Postdoc at KNAW/Westerdijk Institute of Fungal Biodiversity \newline}
-	      {Embedded bioinformatician. \newline}
+	      {Embedded bioinformatician. }
 	      
 	\entry{Nov. 2012 - 2016}
 	      {PhD Candidate \newline}
@@ -190,26 +234,24 @@
   \entry{2012-2018}
         {Pattern Recognition and Bioinformatics group, TU Delft, The Netherlands \newline}
         {PhD in Bioinformatics. \newline
-         \textit{Bioinformatic Analysis of Genetic and Transcriptomic Variation in Fungi}.
-         \newline}
+         \textit{Bioinformatic Analysis of Genetic and Transcriptomic Variation in Fungi}.}
 
   \entry{2010-2012}
         {Leiden University, Leiden, The Netherlands (In cooperation with TU Delft) \newline}
         {MSc Computer Science Track Bioinformatics. \newline
-         Thesis on protein function prediction using Conditional Random Fields.
-         \newline}
+         Thesis on protein function prediction using Conditional Random Fields.}
 
   \entry{2008-2010}
         {Heriot Watt University, Edinburgh, Scotland \newline}
         {BSc (Ord) Computer Science \newline
-         Graduated with distinction.
+         Graduated with distinction. 
          }
 
-%  \entry{2007-2008}
-%        {Napier University, Edinburgh, Scotland \newline}
-%        {Certificate of Higher Education \newline
-%         Completed year 1 of Computer Studies, then transferred to Heriot Watt University.
-%         \newline}
+  \entry{2007-2008}
+        {Napier University, Edinburgh, Scotland \newline}
+        {Certificate of Higher Education \newline
+         Completed year 1 of Computer Studies, then transferred to Heriot Watt University.
+         }
 
 %  \entry{2000-2007}
 %        {International School of Stavanger, Stavanger, Norway \newline}
@@ -234,7 +276,7 @@
            Experienced with Unix environments (primarily Linux).\newline
            Machine learning, statistical genetics, comparative genomics, transcriptomic and metabolomic analysis and algorithm development.
            %Ability to easily use new tools and methods, and if all fails, develop his own.
-           \newline}
+           }
   \entryni{Languages}
           {Fluent in Norwegian, German and English. \newline
            High level Dutch. Beginners French.
@@ -370,22 +412,22 @@
   \label{sec:teaching}
 
   \entry{MSc Courses}{\textit{Functional Genomics and Systems Biolog}y}
-        { \newline {\normalfont Lecturer and teaching assistant. Fall 2014, 2015, and 2016 at TU Delft \newline} }
+        { \newline {\normalfont Lecturer and teaching assistant. Fall 2014, 2015, and 2016 at TU Delft } }
         
   \entry{}{\textit{Computational Molecular Biology}}
-		{ \newline {\normalfont Teaching assistant. Spring 2012 at Leiden University } \newline }
+		{ \newline {\normalfont Teaching assistant. Spring 2012 at Leiden University }  }
 		
   \entry{BSc Courses}{\textit{Life Science and Technology Bioinformatics}}
-        { \newline { \normalfont Teaching assistant. Spring 2016 at TU Delft.} \newline} 
+        { \newline { \normalfont Teaching assistant. Spring 2016 at TU Delft.} } 
         
   \entry{}{\textit{Clinical Biotechnology: Bioinformatics}}
-	{ \newline { \normalfont Teaching assistant. Fall 2018, 2019 at TU Delft.} \newline}
+	{ \newline { \normalfont Teaching assistant. Fall 2018, 2019 at TU Delft.} }
 
   \entry{}{\textit{Molecular Data Science}}
-	{ \newline { \normalfont Teaching assistant. Spring 2018 at Leiden University Medical Center } \newline}
+	{ \newline { \normalfont Teaching assistant. Spring 2018 at Leiden University Medical Center } }
       
   \entry{}{\textit{Genome Scale Data Analysis}}
-		{ \newline { \normalfont Lecturer and teaching assistant. Fall 2014 at TU Delft } \newline}
+		{ \newline { \normalfont Lecturer and teaching assistant. Fall 2014 at TU Delft } }
 		
   \entry{External Courses}{\textit{Quantitative biology summer school}}
         { \newline { \normalfont Lectured on computational aspects of synteny and alternative splicing in fungi. Summer 2015 at Utrecht University.}}
@@ -393,19 +435,19 @@
 \nsection{Student Supervision}
   \label{sec:supervision}
   \entry{Myrthe de Haan}{B.Sc student 2019-2020\newline}
-           {Using the drug-gene interactome to predict intervention-mimicing drugs.\newline}
+           {Using the drug-gene interactome to predict intervention-mimicing drugs.}
            
   \entry{Jet Beekwilder}{B.Sc Student 2017-2018\newline}
-        {Comparison of DNA extraction methods from fungi for Nanopore sequencing.\newline}
+        {Comparison of DNA extraction methods from fungi for Nanopore sequencing.}
         
   \entry{Andr\'{e} Vollering}{M.Sc Student 2014-2015 \newline}
-        {Heterosis: Finding Associated Genomic Regions. \newline}
+        {Heterosis: Finding Associated Genomic Regions. (Under embargo) }
         
   \entry{Valerie Pourquie}{B.Sc Student 2015 \newline}
-        {Conservation of polarization proteins in yeast and fungi. \newline}
+        {\href{https://doi.org/10.1093/gbe/evy121}{Conservation of polarization proteins in yeast and fungi.} }
         
   \entry{Dimitris Palachanis}{M.Sc Student 2013-2014 \newline}
-        {Using the Multiple Instance Learning framework to address differential regulation.}
+        {\href{http://resolver.tudelft.nl/uuid:8233ed00-a892-4b18-beda-057e539a7d73}{Using the Multiple Instance Learning framework to address differential regulation.} }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                       OTHER SKILLS/HOBBIES                                %%
@@ -420,15 +462,19 @@
             ECCB 2016 Student Symposium, 'Best Oral Presentation' award.\newline
           	Benelux Bioinformatics Conference 2015 Student Symposium,, 'Best Oral presentation'.\newline
            TU Delft Graduate School, 'Best poster presentation' award 2013.\newline
-           Scott Logic Computer Science Prize 2010. \newline} 
+           Scott Logic Computer Science Prize 2010. } 
   \entryni{Reviewing}
-          {Nature Scientific Reports (2019)\newline
+          {\href{https://publons.com/researcher/1615872/thies/peer-review/}{Publons profile}\newline
+          	Nature Scientific Reports (2019)\newline
           	FEMS Yeast Research (2018)\newline
-          	Nucleic Acid Research (2016)\newline
+          	Nucleic Acid Research (2016)
           }
   \entryni{Volunteering}
-          {International Student Network (Leiden) 2013-2016. Stage construction and management.\newline
+          {International Student Network (Leiden) 2013-2019. Set construction and management.\newline
            Dutch Red Cross (Den Haag) 2014-2015. First Aid (EHBO) at events and refugee centers.}
+       
+	\entryni{Hackathons}{Hackathon for Good 2019, The Hague: \href{https://www.hackathonforgood.org/translators-without-borders}{Translators Without Borders challenge}\newline
+	Hackathon for Good 2018, The Hague: \href{https://www.hackathonforgood.org/v1-asser-institute-2018}{Asser Lang-grabbing challenge}}
 %  \entryni{Professional Courses followed}
 %          {2014 - NBIC: Comparative Genomics.\newline
 %           2013 - NBIC: Advanced NGS - RNA-Seq.\newline
@@ -441,55 +487,69 @@
 %           CSHL: Statistical Methods in Functional Genomics.\newline
 %          }
 %  \entryni{Special Interests}
- %         {Theatre acting, Sailing, Cycling, Climbing/Bouldering, Swimming, Skiing and Hiking.
+ %         {Thies regularly enjoys Catamaran/Dinghy sailing, Running, Climbing/Bouldering, and Swimming. Holidays Skiing and Hiking. Arboriculture and arborist climbing techniques. From seed-polyculture vegetable gardening.
 %          }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                         PUBLICATIONS                                      %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\newpage
+
 \nsection{Publications}
 \label{sec:publications}
+\entryni{}{\href{https://scholar.google.nl/citations?user=-QVv0WkAAAAJ}{Google Scholar profile}}
 
 \entryni{Journal \newline publications}
 {
-	
 	\begin{enumerate}[label={[\arabic*]},nosep]
 		\item \bibentry{guarnaccia2019phyllosticta} \newline
+		
 		\item \bibentry{vu2019large} \newline
+		
 		\item \bibentry{diepeveen2018patterns} \newline
+		
 		\item \bibentry{gehrmann2018nucleus} \newline
+		
 		\item \bibentry{boonekamp2018genetic} \newline
+		
 		\item \bibentry{manson2017mycobacterium} \newline
+		
 		\item \bibentry{pelkmans2017transcription} \newline
+		
 		\item \bibentry{gehrmann2017variants}
+		
 		\item \bibentry{pelkmans2016transcriptional} \newline
-		\item \bibentry{gehrmann2015proteny}
-		\vspace*{-\baselineskip}
+		
+		\item \bibentry{gehrmann2015proteny} \newline
 	\end{enumerate}
 }
 
 \entryni{Conference \newline publications}
-{\begin{enumerate}[label={[\arabic*]},nosep]
+{
+		\vspace*{-\baselineskip}
+	\begin{enumerate}[label={[\arabic*]},nosep]
 		\addtocounter{enumi}{10}
-		\item \bibentry{gehrmann2013conditional} \vspace*{-\baselineskip}
+		\item \bibentry{gehrmann2013conditional}
 	\end{enumerate}
 }
 
 \entryni{Under Review}
 {
+		\vspace*{-\baselineskip}
 	\begin{enumerate}[label={[\arabic*]},nosep]
 		\addtocounter{enumi}{11}
 		\item {Design and experimental evaluation
 			of a minimal, innocuous watermarking
 			strategy to distinguish near-identical
-			DNA and RNA sequences. (\textit{Under review in ACS Synthetic Biology}) } \newline
-		\vspace*{-\baselineskip}
+			DNA and RNA sequences. (\textit{Under review in ACS Synthetic Biology}) }
+
 	\end{enumerate}
 }
 
 \entryni{In Progress}
 {
+		\vspace*{-\baselineskip}
 	\begin{enumerate}[label={[\arabic*]},nosep]
 		\addtocounter{enumi}{12}
 		\item {Lifestyle Intervention sensitizes the pro-homeostasis blood transcriptomic response to nutrient intake (\textit{In progress}) } \newline
@@ -497,20 +557,27 @@
 		\item {Archana Tare, Seungjin Ryu, Cristina Giuliani, Thies Gehrmann, Gil Atzman, Nir Barzilai, Daniela Mari, Giuseppe Passarino, Claudio Franceschi, Eline P Slagboom, Yousin Suh. Genetic landscape of GDF11 and MSTN in human longevity revealed by high-throughput sequencing in a multi-cohort study  (\textit{In progress}) } \newline
 		\item {Antonis Somarakis, Manolis Fragkiadakis, Marios Kefalas, Stelios Paraschiakos, Michaelis Vrachasotakis, Thies Gehrmann. On the global prediction of land grabbing risk.  (\textit{In progress}) } \newline
 		\item {Annick Lang, Thies Gehrmann, Nils Cronberg. Genetic diversity in bryophyte population with facultative nannandry (\textit{In progress}) } \newline
-		\item {Lizel Mostert, Thies Gehrmann, Duong Vu, Vincent Robert. Genomic analysis of the Grape vine pathogen \textit{Phaeoacremonium} in South African vineyards.  (\textit{In progress}) } \newline
+		\item {Lizel Mostert, Thies Gehrmann, Duong Vu, Vincent Robert. Genomic analysis of the Grape vine pathogen \textit{Phaeoacremonium} in South African vineyards.  (\textit{In progress}) }
 
-		\vspace*{-\baselineskip}
 	\end{enumerate}
 }
 
 \nsection{Conference Talks}
 
-\entry{2019}{LANDac 2019\newline}{Uniting Global and Hyper-Local Data for Land: The use of global and local data for land grabbing risk prediction\newline}
-\entry{}{European Dialogue on Internet Governance, EuroDIG 2019 \newline}{Digital cooperation in action – A collaborative case study: Predicting Land Grabbing\newline}
-\entry{}{BioSB 2019\newline}{Nutrient challenge exposes transcriptomic shift by lifestyle intervention in healthy participants\newline}
-\entry{2016}{ECCB Student Symposium 2016\newline}{Karyollele specific expression in Agaricus bisporus\newline}
-\entry{2015}{BBC Student Symposium 2015\newline}{Alternative Splicing in mushrooms from RNA-Seq\newline}
-\entry{2013}{Pattern Recognition in Bioinformatics 2013\newline}{Conditional Random Fields for protein function prediction}
+\entry{2019}{LANDac 2019: Panel organizer and presenter\newline}{Uniting Global and Hyper-Local Data for Land: The use of global and local data for land grabbing risk prediction}
+\entry{}{European Dialogue on Internet Governance, EuroDIG 2019: Panel organizer and presenter \newline}{Digital cooperation in action - A collaborative case study: Predicting Land Grabbing}
+\entry{}{BioSB 2019: Presenter\newline}{Nutrient challenge exposes transcriptomic shift by lifestyle intervention in healthy participants}
+\entry{2016}{ECCB Student Symposium 2016: Presenter\newline}{Karyollele specific expression in Agaricus bisporus}
+\entry{2015}{BBC Student Symposium 2015: Presenter\newline}{Alternative Splicing in mushrooms from RNA-Seq}
+\entry{2013}{Pattern Recognition in Bioinformatics 2013: Presenter\newline}{Conditional Random Fields for protein function prediction}
+
+\nsection{Conference Organization}
+
+\entry{2019}{LANDac 2019: Panel organizer\newline}{Uniting Global and Hyper-Local Data for Land}
+\entry{}{European Dialogue on Internet Governance, EuroDIG 2019: Panel organizer\newline}{Digital cooperation in action - A collaborative case study}
+
+%\nsection{Posters}
+%\entry{2019}{}{}
 
 \nobibliography{cv}
 \end{document}
