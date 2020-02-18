@@ -1,0 +1,173 @@
+\documentclass[letterpaper, 10pt]{article} %norsk
+
+% Packages
+\usepackage[left=2cm, right=2cm, top=3cm]{geometry}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{xspace}
+\usepackage{xstring}
+\usepackage[skins,breakable]{tcolorbox}
+
+\usepackage{natbib}
+\usepackage{bibentry}
+\nobibliography{cv}
+
+\usepackage{endnotes}
+
+\let\footnote=\endnote
+
+\makeatletter
+\renewcommand\footnotesize{%
+	\@setfontsize\footnotesize\@ixpt{3}%
+	\abovedisplayskip 4\p@ \@plus2\p@ \@minus4\p@
+	\abovedisplayshortskip \z@ \@plus\p@
+	\belowdisplayshortskip 4\p@ \@plus2\p@ \@minus2\p@
+	\def\@listi{\leftmargin\leftmargini
+		\topsep 4\p@ \@plus2\p@ \@minus2\p@
+		\parsep 2\p@ \@plus\p@ \@minus\p@
+		\itemsep \parsep}%
+	\belowdisplayskip \abovedisplayskip
+}
+\makeatother
+
+% Set up hyperref
+\hypersetup{
+	colorlinks,
+	breaklinks,
+	linkcolor=NavyBlue,
+	urlcolor=NavyBlue,
+	pdftitle={Thies Gehrmann Letter of Motivation},
+	pdfauthor={Thies Gehrmann},
+	pdfsubject={Letter of Motivation},
+	pdfcreator={Thies Gehrmann},
+	pdfproducer={Thies Gehrmann},
+}
+
+% Geometry 
+\textheight 23 cm
+\textwidth 16 cm
+\oddsidemargin 0 cm
+\evensidemargin 0 cm
+
+% Create a function for quoting
+\renewcommand{\quote}[1]{
+	``\emph{#1}''
+}
+
+% Make lists without bullets
+\renewenvironment{itemize}{
+	\begin{list}{$\cdot$}{
+			\setlength{\itemsep}{0pt}
+			\setlength{\topsep}{7pt}
+			\setlength{\leftmargin}{0pt}
+			\setlength{\itemindent}{10pt}
+		}
+	}{
+	\end{list}
+}
+
+% A new section header
+\newcommand{\nsection}[1]{
+	\section*{\color{MidnightBlue}#1}
+	\vspace{-1mm}
+}
+
+% A non italicized item in a section
+\newcommand{\entryni}[2]{
+	\noindent
+	\begin{tabular}[t]{p{0.2\textwidth}|p{0.8\textwidth}}
+		\textbf{\color{BrickRed}#1} & {#2} \\
+	\end{tabular}
+	\vspace{-2mm}
+	
+}
+
+% An italicized item in a section
+\newcommand{\entry}[3]{
+	\noindent
+	\begin{tabular}[t]{p{0.2\textwidth}|p{0.8\textwidth}}
+		\textbf{\color{BrickRed}#1} & {#2 \textit{#3}} \\
+	\end{tabular}
+	\vspace{-2mm}
+}
+
+\newcommand{\fl}[1]{
+	{\color{MidnightBlue}\StrLeft{#1}{1}\xspace}\StrGobbleLeft{#1}{1}\xspace
+}
+
+% No paragraph indent
+\setlength\parindent{10pt}
+
+% Data definitions
+\def\doctitle{\color{BrickRed}Letter of Motivation}
+\def\name{\color{MidnightBlue}Thies Gehrmann}
+\def\maxdeg{\color{Black}Ph.D}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                    END LATEX PREAMBLE                                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\small
+
+\pagestyle{plain}
+
+\label{top}
+
+  % Title
+{\huge {\textbf \name} {\footnotesize $\,$ \maxdeg} $\;$ {\textbf \doctitle} }
+\vspace{0.1cm}
+\hrule
+\vspace{0.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                    CONTACT & CONTENT INFORMATION                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{tcolorbox}[
+	blanker,
+	width=0.90\textwidth,
+	enlarge left by=0.05\textwidth,
+	enlarge right by=0.05\textwidth,
+	before skip=6pt,
+	breakable]
+\setlength{\parindent}{2em}
+\setlength{\parskip}{1em}
+
+\noindent Dear Dr. Lebeer and Dr. van den Broek,
+
+I am applying to the Post-Doctoral vacancy within your ERC Lacto-Be project on understanding the evolution of the ecological niches of lactobacilli. While I have limited experience with lactobacilli (in the context of sourdough bread preparation and lactic-acid fermentation), my scientific background stems primarily from fungi. During my PhD, I used gene expression data throughout mushroom formation in both a model mushroom system and an industrial champignon to examine the transcriptomic variation of alternative splicing, subgenome dominance and tissue-specific expression and genomic variation during a laboratory strain-preservation scheme. During my first postdoctoral position at a fungal biodiversity centre, I contributed to the phylogenetic and syntenic analysis of several fungal pathogens, investigated the evolution and conservation of glycolytic and protein polarization pathways, and developed techniques to facilitate the deconvolution of watermarked and native pathways in fermentative yeasts. During my second, and current postdoctoral position, I moved away from microbes to study the genetic factors related to familial longevity in exceptionally long-lived human families, the effects of nutritional challenges in the healthy elderly, and the multi-omic, multi-tissue molecular effects of a combined (exercise and diet) lifestyle intervention. These appointments have provided me with a varied background on not only bioinformatic techniques, but also biology.
+
+As I understand your project, you wish to investigate the evolution of lactobacilli across niches in which we find or have developed them, be they comensal (human, animal, or plant symbionts) or exploitative (dairy, bread, preservation, fermentation). Together with this, you want to ascertain the functional variation that has given rise to their niche-specific adaptation. Finally, you want to associate this with their ecology in each niche - niche X contains competing bacteria Y, and therefore the lactobacilli had to adapt with feature Z. With an understanding of their functional evolution, and specifically which functions they gained to adapt to their respective niches (and through their ecology perhaps why), you envision the ability to identify better determinants of fitness for existing and novel niches, to improve strain selection beyond those that have already been achieved through evolution. If I have understood correctly, this is an ambitious project, and I anticipate several challenges. Allow me to fantasize about a possible approach:
+
+First, we must identify the functional variation between lactobacillic colonies in different niches. Here, I assume that there is, or will be, a panel consisting of several characteristics that describe the adaptive variation achieved by the different strains - Perhaps it will include alcohol and lactic acid production efficiencies, viable growth conditions, antifungal or antioxidative properties, and salinity or antibiotic tolerances etc. Second, from the whole genome sequences, to reconstruct a phylogeny of these strains. 16S sequencing will almost certainly not be sufficient to delineate all the strains and this will require orthology maps to be built across the whole genome. Third, using these orthology maps to define the core and accessory genomes to identify the parts of the genome most likely to contribute to differences in functional capability or efficiency. Through co-occurrence, or transcriptomics we could identify gene modules that together form functional subunits for accessory functionality. Fourth, using 16S/ITS/LSU sequencing to determine the bacterial and fungal components of their microbial environment. Finally, the functional characteristics, gene modules and ecological characteristics can be overlaid onto the phylogeny. From this, we can begin to associate the functional characteristics to the gene module presence and ecological characteristics. This will give insight into which modules, bacteria and fungi are related to the functional characteristics of the lactobacilli.
+
+I find your project fascinating as it crosses boundaries between the commensal and exploitative space of functional adaptation. The exploitation of these bacteria is a part of our human heritage. How have we (indirectly) selected our grains based on the lactobacilli that grow on them, protecting them from fungi as they dry, or preserving our flour or bread as we process them into food? We often discuss the selected breeding of crops as something that we do on the crop itself, whereas we do it on the entire ecology surrounding it - the bacteria and fungi on and in the grains and in the soil. Today, in the age of extreme pesticide use, we may be in danger of losing the thousands of years of selection our ancestors have made to arrive at a grain whose microbial ecology benefited us, and our soils. Contemplating this now - How does the microbial ecology of ancient grains look like? Perhaps a future project with seed banks could help unravel our agro-microbial heritage.
+
+
+From your vacancy announcement, it was not entirely clear if you are searching for a pure bioinformatician, or for a mix of wet/dry-lab expertise. While I have no wet-lab experience, and only have computational skills, I am primarily driven by biological questions, such as those posed on your project, and computation is merely my pipette. I hope that my letter has been able to communicate my interest, enthusiasm, and suitability in the challenges this project poses.
+
+For referees of my scientific capabilities or my character, you may contact
+Thomas Abeel (T.Abeel@tudelft.nl), Professor of Bioinformatics at Delft University of Technology, and
+Han Wösten (H.A.B.Wosten@uu.nl), Professor of Microbiology at Utrecht University. If you require further referees, please do not hesitate to ask me.
+
+I hope that I may have the opportunity to discuss the ideas in this letter further with you.
+
+Kind regards,
+
+-Thies Gehrmann
+
+
+\end{tcolorbox}
+
+
+\thispagestyle{empty}
+\end{document}
+

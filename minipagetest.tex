@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage[skins,breakable]{tcolorbox}
+\usepackage{lipsum}% example texts
+\begin{document}
+
+\textcolor{red}{Header} %  <------------------------
+\lipsum[1]
+
+\begin{tcolorbox}[
+  blanker,
+  width=0.90\textwidth,
+  enlarge left by=0.05\textwidth,
+  enlarge right by=0.05\textwidth,
+  before skip=6pt,
+  breakable]
+\textcolor{red}{Body}: %  <------------------------
+\lipsum[3-7]
+\textcolor{red}{End of body}
+\end{tcolorbox}
+
+\end{document}
