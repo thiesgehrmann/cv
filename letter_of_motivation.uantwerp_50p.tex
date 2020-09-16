@@ -1,0 +1,175 @@
+\documentclass[letterpaper, 10pt]{article} %norsk
+
+% Packages
+\usepackage[left=2cm, right=2cm, top=3cm]{geometry}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{xspace}
+\usepackage{xstring}
+\usepackage[skins,breakable]{tcolorbox}
+
+\usepackage{natbib}
+\usepackage{bibentry}
+\nobibliography{cv}
+
+\usepackage{endnotes}
+
+\let\footnote=\endnote
+
+\makeatletter
+\renewcommand\footnotesize{%
+	\@setfontsize\footnotesize\@ixpt{3}%
+	\abovedisplayskip 4\p@ \@plus2\p@ \@minus4\p@
+	\abovedisplayshortskip \z@ \@plus\p@
+	\belowdisplayshortskip 4\p@ \@plus2\p@ \@minus2\p@
+	\def\@listi{\leftmargin\leftmargini
+		\topsep 4\p@ \@plus2\p@ \@minus2\p@
+		\parsep 2\p@ \@plus\p@ \@minus\p@
+		\itemsep \parsep}%
+	\belowdisplayskip \abovedisplayskip
+}
+\makeatother
+
+% Set up hyperref
+\hypersetup{
+	colorlinks,
+	breaklinks,
+	linkcolor=NavyBlue,
+	urlcolor=NavyBlue,
+	pdftitle={Thies Gehrmann Letter of Motivation},
+	pdfauthor={Thies Gehrmann},
+	pdfsubject={Letter of Motivation},
+	pdfcreator={Thies Gehrmann},
+	pdfproducer={Thies Gehrmann},
+}
+
+% Geometry 
+\textheight 23 cm
+\textwidth 16 cm
+\oddsidemargin 0 cm
+\evensidemargin 0 cm
+
+% Create a function for quoting
+\renewcommand{\quote}[1]{
+	``\emph{#1}''
+}
+
+% Make lists without bullets
+\renewenvironment{itemize}{
+	\begin{list}{$\cdot$}{
+			\setlength{\itemsep}{0pt}
+			\setlength{\topsep}{7pt}
+			\setlength{\leftmargin}{0pt}
+			\setlength{\itemindent}{10pt}
+		}
+	}{
+	\end{list}
+}
+
+% A new section header
+\newcommand{\nsection}[1]{
+	\section*{\color{MidnightBlue}#1}
+	\vspace{-1mm}
+}
+
+% A non italicized item in a section
+\newcommand{\entryni}[2]{
+	\noindent
+	\begin{tabular}[t]{p{0.2\textwidth}|p{0.8\textwidth}}
+		\textbf{\color{BrickRed}#1} & {#2} \\
+	\end{tabular}
+	\vspace{-2mm}
+	
+}
+
+% An italicized item in a section
+\newcommand{\entry}[3]{
+	\noindent
+	\begin{tabular}[t]{p{0.2\textwidth}|p{0.8\textwidth}}
+		\textbf{\color{BrickRed}#1} & {#2 \textit{#3}} \\
+	\end{tabular}
+	\vspace{-2mm}
+}
+
+\newcommand{\fl}[1]{
+	{\color{MidnightBlue}\StrLeft{#1}{1}\xspace}\StrGobbleLeft{#1}{1}\xspace
+}
+
+% No paragraph indent
+\setlength\parindent{10pt}
+
+% Data definitions
+\def\doctitle{\color{BrickRed}Letter of Motivation}
+\def\name{\color{MidnightBlue}Thies Gehrmann}
+\def\maxdeg{\color{Black}Ph.D}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                    END LATEX PREAMBLE                                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\small
+
+\pagestyle{plain}
+
+\label{top}
+
+  % Title
+{\huge {\textbf \name} {\footnotesize $\,$ \maxdeg} $\;$ {\textbf \doctitle} }
+\vspace{0.1cm}
+\hrule
+\vspace{0.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                    CONTACT & CONTENT INFORMATION                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{tcolorbox}[
+	blanker,
+	width=0.95\textwidth,
+	enlarge left by=0.025\textwidth,
+	enlarge right by=0.025\textwidth,
+	before skip=6pt,
+	breakable]
+\setlength{\parindent}{2em}
+\setlength{\parskip}{1em}
+
+
+\noindent Dear Prof. Kris Laukens, Dear committee,
+
+I would like to apply for the part-time position as a principal research fellow biomedical data sciences. Currently I am a postdoc in the Molecular Epidemiology group at the Leiden University Medical Center in The Netherlands, and the Max Planck Institute for the Biology of Ageing in Cologne, Germany. Here, I have worked on identifying longevity-associated genomic variants in families of long-lived individuals, which we are currently following up in model systems. I also examine the relationship between transcriptomic and metabolomic effects of nutrient intake and how it is affected by a combined dietary and physical lifestyle intervention in different tissues of healthy elderly male and female humans. Previously, I obtained my PhD from the Delft University of Technology where I studied nuclear-specific expression, alternative splicing, synteny and mutation accumulation, and how these factors are related to mushroom fruiting body development, and the study thereof. Clearly, I have a broad interest as far as the underlying biology is concerned, and I have applied myself towards bioinformatic research across a broad domain of problems and kingdoms of life.
+
+I am pleased to find a strong focus on teaching in this position. I started my teaching career during my Master's as a teaching assistant, where I created and graded coursework and assisted students during practical sessions of a Master's level course. During my PhD, I continued to assist in courses, occasionally lecturing at both the Bachelor's and Master's levels. Often, they were bioinformatics courses for medical and life science students. I have supervised Bachelor and Master students through their final theses, on a variety of subjects, including bioinformatic pipeline construction, algorithm development and machine learning applications for biological problems. Currently I am supervising a PhD student working on predictive models from metabolomic data.
+
+My philosophy on teaching is that it is a supportive role, with the relationship as horizontal as possible. As a teacher, it is our obligation to guide the students towards understanding of the material. I believe that this is best achived by engaging with students directly to stimulate their interest and critical thinking with frequent interaction during lectures, and to work with them socratically through practical sessions. I believe that continuous coursework, rather than final exams, yield a better indication of a student's abilities, and will provide them with a more comprehensive and thorough understanding of the material they study. Simultaneously, especially at higher levels of education such as at the Master’s and PhD levels, students should be encouraged to think creatively about solving the problems they ecounter. While a teacher may provide guidance, the student should be free and encouraged to explore beyond the limitations of their teacher's knowledge. In fact, this is the point at which teaching becomes insipiring to me: when student’s push the boundaries of my knowledge it humbles and teaches me.
+
+As a bioinformatician, I am by definition situated between the computational and the biological domains. However, the destinction between bioinformatician and biologist is deteriorating, and I find that it is the biological questions that motivate me. For this, I believe it is important to reach out to biological partners such that we can support each other in our quests for knowledge. It is with this perspective that I would like to pursue funding for my own research that this position gives space for. Below, I describe some projects that I would like to pursue. In these projects, there are unmistakable bioinformatic challenges. Furthermore, as with any bioinformatic undertaking, there is a need for commensal knowledge from biological experts - in pharmacology, in nutrition, in microbiology and agriculture.
+
+1. The first seeks to develop a drug-repurposing scheme to predict mimetic drugs for a lifestyle intervention. I propose to exploit the drug-protein interactome to determine a raking for drugs that may mimic the effects of a lifestyle intervention in different tissues. Using publicly available datasets of the effects of exercise and dietary interventions in muscle and adipose tissue, we can determine the transcriptomic or proteomic effects of these interventions. A preliminary study I instigated with a student revealed that a method based on graph diffusion was able to reliably predict drugs for a variety of diseases. I would like to extend this towards health related activities, either to identify pharmacological compounds that could ameliorate disease in those that can not exercise, or perhaps, identify drugs that could be replaced by lifestyle changes.
+
+2. My second proposal would address a time-series response to nutrient intake. As a result of my current research, I have identified an acute transcriptomic stress response to a nutritional challenge in healthy adult humans. This response is shared in males and females, although the intensity of this response is different. As the response implicates a strong immunicological component, it has implications for individuals whose eating patterns are disturbed - how do frequent or infrequent stress responses affect the healthy immune response to a real threat? Additionally, what are the dynamics of this stress response - my observations are limited to 30 minutes, but how do these look at a higher resolution, and how do the transcriptomic responses manifest themselves at the proteomic level?
+
+3. The third relates to the effects of different agricultural practices on soil quality. As long as humans have been an agrarian species, we have relied on the soils in which our crops grow. The optimization of agricultural processes towards low cost, high yield farming practices have contributed massively towards land degradation. A transition to alternative agricultural techniques is necessary to sustain human life on earth. Intercropping is an agricultural technique that exploits symbiotic relationships between plants, either in phenotype or in chemistry, to improve the yield of a plot of land, either per harvest or over many cycles. These symbiotic relationships have been neglected in modern agriculture, but have been developed through centuries of traditional agriculture, and are revived in alternative agriculture (poly- and perma-culture). The impact of growing several species on the same plot on soil has not been properly investigated in a metagenomic capacity before. In a polyculture plot, due to the different demands from the soil, I anticipate a selection for different soil biodiversities that result in different levels of soil health when compared to monoculture plots. An investigation of this would yield insights into plant-microbe-plant interactions, and inform strategies for an agricultural shift to counter the effects of unsustainable agricultural practices.
+
+It is with these thoughts on teaching and research that I submit my application for the postdoctoral position in the department of computer science.
+I hope that this letter has conveyed some of my interest, enthusiasm, and suitability for teaching and research in your group. I look forward to hearing from you, and I hope that I may have the opportunity to discuss the ideas in this letter further with you.
+
+
+Kind regards,
+
+-Thies Gehrmann
+\end{tcolorbox}
+
+
+
+\thispagestyle{empty}
+\end{document}
+
